@@ -1,15 +1,43 @@
+:root {
+  --black: #212121;
+}
+
+/* Reset ----------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --black: #212121;
+a{
+  text-decoration: none;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Base  ------------------------------------------------ */
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+}
+
+h1 {
+  font: 700 2rem 'Poppins', sans-serif;
+}
+
+/* Layout ----------------------------------------------- */
 
 #header {
   height: 4.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
@@ -17,3 +45,6 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+
+/* Home ----------------------------------------------------- */
+
