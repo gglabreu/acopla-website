@@ -1,8 +1,8 @@
 :root {
-  --base-color: #6ab99d;
+  --base-color: #7e7e7e;
   --base-color-second: #cdf4e6;
   --base-color-alt: #43cb9c;
-  --title-color: #0f241d;
+  --title-color: #000000;
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
@@ -47,7 +47,8 @@ h1 {
 /* Layout ----------------------------------------------- */
 
 #header {
-  height: 4.5rem;
+  border-bottom: 1px solid;
+  margin-bottom: 2rem;
 }
 
 nav {
@@ -59,12 +60,24 @@ nav {
 
 .logo {
   font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span{ 
+  color: var(--base-color);
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
+.section{
+  padding: 5rem 0;
+}
+
 /* Home ----------------------------------------------------- */
+#home .container {
+  margin: 0;
+}
