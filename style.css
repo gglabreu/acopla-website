@@ -1,7 +1,7 @@
 :root {
   --base-color: #7e7e7e;
-  --base-color-second: #cdf4e6;
-  --base-color-alt: #43cb9c;
+  --base-color-second: #f0f4cd;
+  --base-color-alt: #cbb743;
   --title-color: #000000;
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
@@ -41,13 +41,34 @@ h1 {
 }
 
 .button {
-  color: var(--color);
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
+}
+
+.button::hover {
+  background: var(--base-color-alt);
+}
+
+.diviver-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(159, 36%, 57%, 1) 0%,
+    hsla(159, 65%, 88%, 0.34) 100%
+  );
 }
 
 /* Layout ----------------------------------------------- */
 
 #header {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
 }
 
@@ -63,7 +84,7 @@ nav {
   color: var(--title-color);
 }
 
-.logo span{ 
+.logo span {
   color: var(--base-color);
 }
 
@@ -73,11 +94,54 @@ nav {
   margin-right: 1.5rem;
 }
 
-.section{
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
   padding: 5rem 0;
 }
 
 /* Home ----------------------------------------------------- */
 #home .container {
   margin: 0;
+}
+
+#home .image {
+  position: relative;
+}
+
+#home .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 3rem;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.25rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
 }
