@@ -1,12 +1,18 @@
 :root {
-  --base-color: #7e7e7e;
-  --base-color-second: #f0f4cd;
-  --base-color-alt: #cbb743;
-  --title-color: #000000;
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 20;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 }
+
 
 /* Reset ----------------------------------------------- */
 
@@ -56,40 +62,18 @@ h1 {
   background: var(--base-color-alt);
 }
 
-.diviver-1 {
+.divider-1 {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(159, 36%, 57%, 1) 0%,
-    hsla(159, 65%, 88%, 0.34) 100%
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
 }
 
 /* Layout ----------------------------------------------- */
 
-#header {
-  border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 2rem;
-}
-
-nav {
-  height: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font: 700 1.5rem 'Poppins', sans-serif;
-  color: var(--title-color);
-}
-
-.logo span {
-  color: var(--base-color);
-}
-
 .container {
-  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -103,7 +87,46 @@ nav {
   padding: 5rem 0;
 }
 
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
 /* Home ----------------------------------------------------- */
+#home {
+  overflow: hidden;
+}
+
 #home .container {
   margin: 0;
 }
@@ -136,6 +159,7 @@ nav {
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-align: center;
 }
 
 #home .text h1 {
