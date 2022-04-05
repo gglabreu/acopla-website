@@ -13,7 +13,6 @@
   --body-color: hsl(0 0% 98%);
 }
 
-
 /* Reset ------------------------------------------------------ */
 
 * {
@@ -36,6 +35,10 @@ img {
 }
 
 /* Base -------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font: 400 1rem 'DM Sans', sans-serif;
@@ -135,20 +138,29 @@ nav ul li {
 }
 
 nav ul li a {
-  transition: 0.25s;
+  transition: color 0.25s;
+  position: relative;
 }
 
 nav ul li a:hover {
   color: var(--base-color);
 }
 
-nav ul li a:hover::after {
-  content: "";
-  width: 100%;
+nav ul li a::after {
+  content: '';
+  width: 0%;
   height: 2px;
   background: var(--base-color);
 
   position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 nav .menu {
@@ -156,11 +168,13 @@ nav .menu {
   visibility: hidden;
 }
 
+/* Mostrar Menu ----------------------------------------------------- */
+
 nav.show .menu {
   opacity: 1;
   visibility: visible;
 
-  background-color: var(--body-color);
+  background: var(--body-color);
 
   height: 100vh;
   width: 100vw;
@@ -168,11 +182,13 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-}
 
-nav.show .menu {
   display: grid;
   place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
 }
 
 nav.show ul.grid {
