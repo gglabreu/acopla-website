@@ -4,13 +4,13 @@
   /* colors */
   --hue: 20;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
-  --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(0 0% 46%);
-  --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 98%);
+  --base-color: #000000;
+  --base-color-second: #1c1c1c;
+  --base-color-alt: #363636;
+  --title-color: #4f4f4f;
+  --text-color: #000000;
+  --text-color-light: #ffffff;
+  --body-color: #ffffff;
 }
 
 /* Reset ------------------------------------------------------ */
@@ -125,7 +125,7 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: var(--base-color);
   width: 100%;
 }
 
@@ -145,7 +145,7 @@ main {
 }
 
 .logo span {
-  color: var(--base-color);
+  color: var(--text-color-light);
 }
 
 /* Navigation ----------------------------------------------------- */
@@ -226,6 +226,7 @@ nav.show ul.grid {
 }
 
 /* toggle menu */
+
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
