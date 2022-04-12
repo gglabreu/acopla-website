@@ -65,7 +65,7 @@ body {
   transition: background 0.3s;
 }
 
-.button::hover {
+.button:hover {
   background: var(--base-color-alt);
 }
 
@@ -120,7 +120,6 @@ body {
   margin-bottom: 2rem;
   display: flex;
 
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -159,7 +158,7 @@ nav {
 }
 
 nav ul li {
-  align-items: center;
+  text-align: center;
 }
 
 nav ul li a {
