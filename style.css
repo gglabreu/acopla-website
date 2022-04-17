@@ -2,7 +2,7 @@
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 20;
+  --hue: 0;
   /* HSL color mode */
   --base-color: #000000;
   --base-color-second: #1c1c1c;
@@ -73,7 +73,7 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsl(var(--hue), 0%, 0%, 1) 0%,
     hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
 }
@@ -365,9 +365,15 @@ nav.show div.icon-close {
   background: white;
 }
 
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
 #testimonials blockquote {
   padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 
@@ -393,11 +399,27 @@ nav.show div.icon-close {
   color: var(--title-color)
 }
 
-#testimonials cite img{
+#testimonials cite img {
   width: 2rem;
   height: 2rem;
   object-fit: cover;
   clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+/* Swiper ---------------------------------------------------------*/
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
 }
 
 /* Contact ----------------------------------------------------- */
@@ -405,11 +427,16 @@ nav.show div.icon-close {
   gap: 4rem;
 }
 
-#contact .text p{
+#contact .text p {
   margin-bottom: 2rem;
 }
 
-#contact .button i, #contact ul li i {
+#contact .button{
+  background-color: #34af23;
+}
+
+#contact .button i,
+#contact ul li i {
   font-size: 1.5rem;
   margin-right: 0.625rem;
 }
@@ -426,4 +453,3 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
-
