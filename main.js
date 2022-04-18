@@ -39,4 +39,4 @@ const swiper = new Swiper('.swiper-container', {
   },
   mousewheel: true,
   keyboard: true
-});
+})
