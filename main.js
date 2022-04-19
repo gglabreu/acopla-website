@@ -35,8 +35,32 @@ window.addEventListener('scroll', function () {
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  }
 })
+
+/* mostrar elementos quando der scroll na página com scrollreview */
+
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '100px',
+  duration: 680,
+  reset: true
+})
+
+scrollReveal.reveal(
+  `#home .image, #home .text,
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials, 
+  #contact .text, #contact .links
+  `,
+  { interval: 100 }
+)
