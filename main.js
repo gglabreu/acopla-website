@@ -41,7 +41,7 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false
   }
 })
