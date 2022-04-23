@@ -453,3 +453,14 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
+
+/* Footer --------------------------------------------------- */
+
+footer {
+  background-color: var(--base-color);
+  color: #ffffff;
+}
+
+footer a {
+  color: var(--title-color);
+}
