@@ -5,8 +5,8 @@
   --hue: 0;
   /* HSL color mode */
   --base-color: #000000;
-  --base-color-second: #1c1c1c;
-  --base-color-alt: #363636;
+  --base-color-second: #7c7c7c;
+  --base-color-alt: #9b9a9a;
   --title-color: #4f4f4f;
   --text-color: #000000;
   --text-color-light: #ffffff;
@@ -458,9 +458,27 @@ nav.show div.icon-close {
 
 footer {
   background-color: var(--base-color);
-  color: #ffffff;
+  color: var(--base-color-second);
 }
 
 footer a {
-  color: var(--title-color);
+  color: var(--text-color-light);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 2rem;
+}
+
+footer .social {
+  display: flex;
+  gap: 2.5rem;
 }
