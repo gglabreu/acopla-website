@@ -478,12 +478,21 @@ footer i {
   font-size: 2rem;
 }
 
+footer .social a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  transform: translateY(-6px);
+}
+
 footer .social {
   display: flex;
   gap: 2.5rem;
 }
 
-/* Back to top --------------------------------------------------- */
+/* Back to top ------------------------------------------------- */
 .back-to-top {
   background: var(--base-color);
   color: var(--body-color);
@@ -509,4 +518,8 @@ footer .social {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsivo ----------------------------------------------------- */
+@media() {
 }
