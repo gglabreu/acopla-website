@@ -130,6 +130,10 @@ body {
   width: 100%;
 }
 
+#header .container .menu .grid .title {
+  color: #ffffff;
+}
+
 #header.scroll {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
@@ -169,14 +173,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--base-color);
+  color: var(--base-color-alt);
 }
 
 nav ul li a::after {
   content: '';
   width: 0%;
   height: 2px;
-  background: var(--base-color);
+  background: var(--base-color-alt);
 
   position: absolute;
   left: 0;
@@ -205,7 +209,7 @@ nav.show .menu {
   opacity: 1;
   visibility: visible;
 
-  background: var(--body-color);
+  background: var(--base-color);
 
   height: 100vh;
   width: 100vw;
@@ -496,7 +500,7 @@ footer .social {
 
 /* Back to top ------------------------------------------------- */
 .back-to-top {
-  background: var(--base-color);
+  background: var(--title-color);
   color: var(--body-color);
 
   position: fixed;
